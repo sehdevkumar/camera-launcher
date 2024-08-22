@@ -1,30 +1,29 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
-
 export default function GateInferedCard() {
     return (
-        <View style={styles.card}>
-            <Text style={styles.plateNumber}>DL 01 HG 5425</Text>
-            <Text style={styles.time}>Today 11:00 am</Text>
-            <Text style={styles.size}>W 5 / M 3.5 - W 12 / M 10.5</Text>
+      <View style={styles.card}>
+        <Text style={styles.plateNumber}>DL 01 HG 5425</Text>
+        <Text style={styles.time}>Today 11:00 am</Text>
+        <Text style={styles.size}>W 5 / M 3.5 - W 12 / M 10.5</Text>
 
-            <View style={styles.imageContainer}>
-                <Image
-                    style={styles.image}
-                    source={{ uri: 'https://via.placeholder.com/150' }}
-                    resizeMode="contain"
-                />
-            </View>
-
-            <View style={styles.buttonContainer}>
-                <TouchableOpacity style={styles.button}>
-                    <Text style={styles.buttonText}>Survey</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.button}>
-                    <Text style={styles.buttonText}>Damage</Text>
-                </TouchableOpacity>
-            </View>
+        <View style={styles.imageContainer}>
+          <Image
+            style={styles.image}
+            resizeMode="contain"
+            source={require("../../../assets/images/react-logo.png")}
+          />
         </View>
+
+        <View style={styles.buttonContainer}>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.buttonText}>Survey</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.buttonText}>Damage</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
     );
 }
 
@@ -41,7 +40,6 @@ const styles = StyleSheet.create({
         elevation: 5, // for Android shadow
         borderWidth: 1,
         borderColor: '#ddd',
-        width: 250, // Adjust according to your design
     },
     plateNumber: {
         fontSize: 18,
@@ -71,6 +69,7 @@ const styles = StyleSheet.create({
         height: 100,
     },
     buttonContainer: {
+        gap: 10,
         flexDirection: 'row',
         justifyContent: 'space-between',
     },

@@ -29,7 +29,8 @@
     "plugins": [
       "expo-router",
       "expo-camera",
-        "expo-media-library"
+      "expo-media-library",
+      "expo-asset"
     ],
     "experiments": {
       "typedRoutes": true

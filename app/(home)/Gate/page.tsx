@@ -18,7 +18,7 @@ export default GatePage
 
 const styles = StyleSheet.create({
     container: {
-      
+      backgroundColor: '#f9f9f9'
 
     },
 
