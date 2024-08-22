@@ -7,18 +7,18 @@ function LandingCard() {
 
    function onCardClicked(path:string) {
     
-       router.push('/gateIn')
+       router.push(`/${path}` as any)
 
    }
 
 
     return (
         <View style={styles.cardContainer}>
-            <TouchableOpacity  style={styles.card} onPress={(e)=> onCardClicked('GateIn')}>
+            <TouchableOpacity  style={styles.card} onPress={(e)=> onCardClicked('gateIn')}>
                 <Text style={styles.cardText}>Gate In</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.card} onPress={(e) => onCardClicked('GateOut')}>
+            <TouchableOpacity style={styles.card} onPress={(e) => onCardClicked('gateOut')}>
                 <Text style={styles.cardText}>Gate Out</Text>
             </TouchableOpacity>
         </View>
