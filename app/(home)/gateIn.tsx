@@ -1,11 +1,9 @@
 import React from 'react'
-import { Text } from 'react-native'
+import GatePage from './Gate/page'
 
 function GateIn() {
   return (
-    <Text>
-       I am from the gate
-    </Text>
+    <GatePage/>
   )
 }
 
