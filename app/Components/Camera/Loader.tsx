@@ -39,6 +39,30 @@ export default function CameraPage() {
 
     }
 
+    async function ImagePost(result:any) {
+        let localUri = result.uri;
+        let filename = localUri.split('/').pop();
+
+        // Infer the type of the image
+        let match = /\.(\w+)$/.exec(filename);
+        let type = match ? `image/${match[1]}` : `image`;
+
+        // Upload the image using the fetch and FormData APIs
+        let formData = new FormData() as any;
+        // Assume "photo" is the name of the form field the server expects
+        formData?.append('photo', { uri: localUri, name: filename, type });
+
+        console.log(formData,"form data");
+
+        return await fetch('localhost', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'content-type': 'multipart/form-data',
+            },
+        });
+    }
+
     function OnStartCapture(e:any) {
         if (cameraRef.current) {
             cameraRef?.current
@@ -50,6 +74,13 @@ export default function CameraPage() {
                     try {
                         const asset = await MediaLibrary.createAssetAsync(photoData.uri);
                         console.log(photoData.uri, asset);
+                                 
+                        ImagePost(photoData).then(r=> {
+                            console.log(photoData);
+                        }).catch(err=> {
+                             console.log(err)
+                        })
+
                         
                     } catch (error) {
                        console.debug(error) 
