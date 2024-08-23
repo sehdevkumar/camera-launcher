@@ -4,20 +4,10 @@ export default function HomeLayout() {
   return (
     <Stack
       screenOptions={{
-        headerStyle: {
-          backgroundColor: '#676767',
-        },
-        headerTintColor: '#fff',
-        headerBackTitle: 'Hello',
-        headerTitleStyle: {
-          fontWeight: 'bold',
-        },
-        title: 'Gate'
+         headerShown:false
       }}>
       <Stack.Screen name="index" />
-      <Stack.Screen name="gateIn" />
-
-
+      <Stack.Screen name="(gate)" />
     </Stack>
   );
 }

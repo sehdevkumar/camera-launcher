@@ -7,7 +7,7 @@ function LandingCard() {
 
    function onCardClicked(path:string) {
     
-       router.push(`/${path}` as any)
+       router.push(`/(home)/(gate)/${path}`)
 
    }
 
