@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
-import CameraPage from '../../components/CameraController';
 import LandingPage from './Landing/page';
+import React = require('react');
 
 export default function HomeScreen() {
     return (

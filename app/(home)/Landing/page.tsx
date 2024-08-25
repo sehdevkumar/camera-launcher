@@ -11,7 +11,7 @@ function LandingPage() {
     return (
       <View style={styles.container}>
         <Image source={require("../../../assets/images/react-logo.png")} />
-        <Text style={{ fontSize: 30 }}>Select Gate</Text>
+        <Text style={{ fontSize: 30 }}>Select From</Text>
         <LandingCard />
       </View>
     );
