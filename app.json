@@ -3,7 +3,7 @@
     "name": "camera-launcher",
     "slug": "camera-launcher",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "ALL",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
@@ -39,7 +39,8 @@
       "expo-camera",
       "expo-media-library",
       "expo-asset",
-      "expo-build-properties"
+      "expo-build-properties",
+      "expo-screen-orientation"
     ],
     "experiments": {
       "typedRoutes": true
